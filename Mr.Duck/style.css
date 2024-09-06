@@ -1,0 +1,23 @@
+.duck-it > img{
+    height: 100px;
+    width: 100px;
+    left: 60%;
+    position: relative ;
+    transform: translateX(-50%);
+    top: -100px 
+}
+
+.form{
+    top: 30px;
+    position: relative ;
+}
+
+header{
+    left: 71%; 
+    position: relative;
+    transform: translateX(-50%);
+}
+
+#inputter{
+    height: 123px;
+}
