@@ -1,6 +1,7 @@
 import { Car } from "./Car.js";
 import { Cats } from "./Cats.js";
 import { Person } from "./Person.js";
+import Books from "./Books.js";
 
 let name = "Sabin";
 const birthDate = new Date(2000, 9, 29);
@@ -185,3 +186,71 @@ function CreateToDo() {
 
   document.getElementById("todolist").appendChild(newLi);
 }
+
+//loopsies
+
+const numbers = [4, 7, 5, 6, 2, 9];
+let sum = 0;
+for (let x of numbers) {
+  sum = sum + x;
+}
+console.log("the result is" + sum);
+
+const array = ["Peter", 7, "Marianne", true, "Helle", 8];
+
+for (let element_array of array) {
+  console.log(element_array + " is a " + typeof element_array);
+}
+
+const book = [
+  {
+    title: "book 1",
+    author: "good author",
+  },
+  {
+    title: "book 2",
+    author: "bad author",
+  },
+];
+
+const good_books = [
+  new Books("book3", "very good author"),
+  new Books("book4", "best author"),
+];
+
+for (let book of good_books) {
+  var newLi = document.createElement("LI");
+  var text = document.createTextNode(`${book.title} by ${book.author}`);
+  newLi.appendChild(text);
+  document.getElementById("Booklist").appendChild(newLi);
+}
+
+//ifsies
+
+const largest = (num1, num2, num4, num5) => {
+  let largest_num = num1;
+
+  if (num2 > largest_num) {
+    largest_num = num2;
+  }
+  if (num4 > largest_num) {
+    largest_num = num4;
+  }
+  if (num5 > largest_num) {
+    largest_num = num5;
+  }
+
+  return largest_num;
+};
+
+console.log(largest(-200, 6, 18, 15));
+
+const fromTo = (num1, num2, num4) => {
+  if (num1 > num2 && num1 < num4) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log(fromTo(80, 78, 99));

@@ -1,23 +1,49 @@
-.duck-it > img{
-    height: 100px;
-    width: 100px;
-    left: 60%;
-    position: relative ;
-    transform: translateX(-50%);
-    top: -100px 
+body {
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
 }
 
-.form{
-    top: 30px;
-    position: relative ;
+header {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-header{
-    left: 71%; 
-    position: relative;
-    transform: translateX(-50%);
+.form {
+    margin-bottom: 20px;
 }
 
-#inputter{
-    height: 123px;
+#inputter {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+#input_button,
+#user {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#input_button:hover,
+#user:hover {
+    background-color: #45a049;
+}
+
+.duck-it img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    width: 300px;
+    border: 5px solid #ffcc00;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f0f8ff;
+    padding: 10px;
 }
