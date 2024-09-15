@@ -3,6 +3,7 @@ import { Cats } from "./Cats.js";
 import { Person } from "./Person.js";
 import Books from "./Books.js";
 
+//ClassWorks
 let name = "Sabin";
 const birthDate = new Date(2000, 9, 29);
 
@@ -27,8 +28,11 @@ let cat1 = {
 };
 
 console.log(cat1);
-
 console.log(cat1.getNameColor());
+
+//FUNCTIONS & OBJECTS
+// Create a javascript function that takes firstname and lastname as 2 parameters and
+// uses console.log() to output the person's name.
 
 const person = {
   myfirstName: "Sabin",
@@ -39,11 +43,19 @@ const { myfirstName, mylastname } = person;
 
 console.log(myfirstName, mylastname);
 
+
+// Create a function that calculates the area of a rectangle. The function should return
+// the result. Test that it works
+
 function AreaOfRectangle(a, b) {
   console.log("area is " + a * b);
 }
 
 AreaOfRectangle(5, 10);
+
+
+// Create a function that takes speed and time as 2 parameters and calculates and
+// returns the distance.
 
 function Distance(s, t) {
   let dist = s * t;
@@ -51,6 +63,10 @@ function Distance(s, t) {
 }
 
 Distance(7, 7);
+
+
+// Create an object called calculator with the name of the owner (eg. Your name) and
+// modify your code so the 3 previous functions are attached to the object.
 
 let Calculator = {
   name: "Rimuru",
@@ -63,7 +79,7 @@ console.log(Calculator);
 Calculator.AreaOfRectangle(10, 10);
 console.log(Calculator.Distance(10, 10));
 
-//class
+//Classes
 
 const person1 = new Person("sabin", " watching anime");
 person1.greet();
@@ -114,7 +130,7 @@ console.log(myOwnArray);
 let mynewArray = myOwnArray.slice(0, 3);
 console.log(mynewArray);
 
-// another array exercise
+//  Array exercise 2
 
 const first_person = {
   firstname: "Uzumaki",
@@ -159,35 +175,8 @@ console.log(first_student);
 
 updateStudentName(first_student, "bad student");
 console.log(first_student);
-//getelementById
 
-const box = document.getElementById("box");
-box.addEventListener("click", function () {
-  if (box.style.background === "red") {
-    box.style.background = "blue";
-  } else {
-    box.style.background = "red";
-  }
-});
-
-document.getElementById("newToDoText").addEventListener("keydown", (event) => {
-  if (event.key === "Delete") {
-    CreateToDo();
-  }
-});
-document.getElementById("add_to-dO").addEventListener("click", function () {
-  CreateToDo();
-});
-
-function CreateToDo() {
-  const newText = document.getElementById("newToDoText").value;
-  const newLi = document.createElement("li");
-  newLi.textContent = newText;
-
-  document.getElementById("todolist").appendChild(newLi);
-}
-
-//loopsies
+//Loops And Arrays
 
 const numbers = [4, 7, 5, 6, 2, 9];
 let sum = 0;
@@ -202,6 +191,7 @@ for (let element_array of array) {
   console.log(element_array + " is a " + typeof element_array);
 }
 
+// Loops and Objects
 const book = [
   {
     title: "book 1",
@@ -225,7 +215,9 @@ for (let book of good_books) {
   document.getElementById("Booklist").appendChild(newLi);
 }
 
-//ifsies
+//IF ELSE
+//Create a function, findLargest, that takes 4 numbers as 4 parameters and returns
+//the largest of the 4 numbers.
 
 const largest = (num1, num2, num4, num5) => {
   let largest_num = num1;
@@ -245,6 +237,11 @@ const largest = (num1, num2, num4, num5) => {
 
 console.log(largest(-200, 6, 18, 15));
 
+
+//Create a function that takes 3 numbers as 3 parameters. The first parameter is the
+//number to check. The 2nd and 3rd parameter is a range (from and to). If the first
+//parameter is within the range of the range it should return true and false if not.
+
 const fromTo = (num1, num2, num4) => {
   if (num1 > num2 && num1 < num4) {
     return true;
@@ -254,3 +251,98 @@ const fromTo = (num1, num2, num4) => {
 };
 
 console.log(fromTo(80, 78, 99));
+
+//EXERCISE: HIGHER OR LOWER
+
+
+let random_num = Math.floor((Math.random() * 10) + 1);
+console.log(random_num);
+
+let count = 0;
+
+document.getElementById("numberSender").addEventListener("click",function () {
+  count = count + 1;
+  RandomSelector();
+});
+
+function RandomSelector(){
+let incoming_num =  document.getElementById("nawmbertaker").value
+  if(incoming_num > random_num){
+    alert("Number is not correct, guess again. Hint : Number is lesser than the guess.")
+  }else if (incoming_num <random_num){
+    alert("Number is not correct, guess again. Hint : Number is greater than the guess.")
+  }
+  else{
+    alert("Number was correct, you are a lucky human. You guessed it on "+ count + " time/s." )
+  }
+}
+
+
+//DOM Events
+
+//ClassWork - Color Changing Box 
+
+const box = document.getElementById("box");
+box.addEventListener("click", function () {
+  if (box.style.background === "red") {
+    box.style.background = "blue";
+  } else {
+    box.style.background = "red";
+  }
+});
+
+// Exercise – Show / Hide
+
+let msgSelector = document.getElementById("hoverMe")
+let hiddenMsgSelector = document.getElementById("hiddenMesses")
+msgSelector.addEventListener("mouseover", (event) =>{
+  hiddenMsgSelector.classList.remove("hidden")
+  hiddenMsgSelector.classList.add("visible")
+});
+
+msgSelector.addEventListener("mouseout", (event) =>{
+  hiddenMsgSelector.classList.remove("visible")
+  hiddenMsgSelector.classList.add("hidden")
+});
+
+
+//ClassWork - ToDo List
+
+document.getElementById("newToDoText").addEventListener("keydown", (event) => {
+  if (event.key === "Delete") {
+    CreateToDo();
+  }
+});
+document.getElementById("add_to-dO").addEventListener("click", function () {
+  CreateToDo();
+});
+
+function CreateToDo() {
+  const newText = document.getElementById("newToDoText").value;
+  const newLi = document.createElement("li");
+  newLi.textContent = newText;
+
+  document.getElementById("todolist").appendChild(newLi);
+}
+
+
+//Extra Exercise with dropdown thingies
+document.getElementById('itemSelect').addEventListener('change', function() {
+  var selectedItem = this.value;
+  var itemList = document.getElementById('itemList');
+
+  if (selectedItem) {
+    var items = Array.from(itemList.children);
+    var existingItem = items.find(item => item.getAttribute('data-value') === selectedItem);
+      
+      if (existingItem) {
+          itemList.removeChild(existingItem);
+      } else {
+          var newItem = document.createElement('li');
+          newItem.textContent = selectedItem;
+          newItem.setAttribute('data-value', selectedItem);
+          itemList.appendChild(newItem);
+      }
+      this.value = '';
+  }
+});

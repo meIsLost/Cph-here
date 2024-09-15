@@ -3,20 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   <title>To-Do & Booklist Manager</title>
+   <!-- Link to external JavaScript -->
+   <script type="module" src="basicTest.js"></script>
 
-    <script type="module" src="basicTest.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css"></link>
-
+   <!-- Link to external CSS -->
+   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-   <p> Hello Hi </p>
-   <div class = "box"  id = "box" ></div>  </div>
-   <input type="text" id="newToDoText" />
-   <button id = "add_to-dO"> Create New To-Do</button>
-   <ul id="todolist">
-</ul>
-<ul id="Booklist">
-   </ul>
+   <!-- Main container -->
+   <div class="container">
+      <!-- Title Section -->
+      <header>
+         <h1>Exercise Gallery</h1>
+         <p>All the exercise are made in this HTML</p>
+      </header>
+   
+      <!-- To-Do Section -->
+      <section class="todo-section">
+         <h2>To-Do List</h2>
+         <p>Manage your daily tasks below:</p>
+   
+         <!-- Input and Button to create new to-dos -->
+         <input type="text" id="newToDoText" placeholder="Enter a new task" />
+         <button id="add_to-dO">Create New To-Do</button>
+   
+         <!-- To-Do List -->
+         <ul id="todolist">
+         </ul>
+      </section>
+      
+      <!-- Booklist Section -->
+      <section class="booklist-section">
+         <h2>Book List</h2>
+         <p>Manage your reading list below:</p>
+      
+         <!-- Book List -->
+            <ul id="Booklist">
+            </ul>
+      </section>
+      
+      <!-- Number Guesser -->
+      <p>Play number guesser</p>
+      <input type="number" id="nawmbertaker" placeholder="Enter a number between 1 and 100" />
+      <button id="numberSender">Send the Guess</button>
+      
+      <!-- Box (Optional content) -->
+      <p>Click the box to change the color:</p>
+      <div class="box" id="box"></div>
+      
+      <button id="hoverMe"> Hover Over Me</button>
+      <div id="hiddenMesses" class="hidden">
+         <p>if you see this you are goonna have a good day.</p>
+      </div>
+      
+      <div id="select">
+         <ul id="itemList"></ul>
+         <label for="anime">Choose an anime:</label>
+         <select id="itemSelect">
+            <option value="slime">slime</option>
+            <option value="vinlandSaga">vinlandSaga</option>
+            <option value="dungeonMeshi">dungeonMeshi</option>
+            <option value="hunterXhunter">hunterXhunter</option>
+         </select>
+      </div>
+      </div>
+
 </body>
 </html>
